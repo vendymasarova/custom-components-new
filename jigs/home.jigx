@@ -1,0 +1,11 @@
+title: Name
+description: Description of your Jig
+type: jig.default
+
+
+children:
+  - type: component.custom-component
+    componentId: stepper-1
+    inputs:
+      number-of-steps: 4
+      current-step: 1 

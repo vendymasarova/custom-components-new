@@ -1,0 +1,250 @@
+inputs:
+  current-step: 
+    defaultValue: 1
+    required: true
+    type: number
+  number-of-steps:
+    defaultValue: 1
+    required: true
+    type: number    
+# Max steps: 5
+type: component.default
+children:
+  - type: component.view
+    options:
+      style: 
+        flex: 
+          direction: row
+          grow: 1
+        gap: small
+        # background:
+        #   color: "card"
+        radius: small
+        
+      children:
+        # STEP 1
+        - type: component.view
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+              gap: small
+              alignItems: center
+              alignContent: center 
+              border:
+                style: solid
+                emphasis: extra-low
+              radius: medium
+              padding: small
+              background:
+                color: =$number(@ctx.inputs.current-step) = 1 ? 'primary'
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 1
+                options:
+                  icon: checkbox-checked
+                  size: regular
+                  color: positive
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) = 1
+                options:
+                  icon: checkbox-unchecked
+                  size: regular
+                  color: positive  
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      grow: 1
+                    justifyContent: center
+                  children:
+                    - type: component.text
+                      options:
+                        value: "Date and guests"
+                        size: tiny
+                        align: center
+        # STEP 2
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) >= 2
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+              gap: small
+              alignItems: center
+              alignContent: center 
+              border:
+                style: solid
+                emphasis: extra-low
+              radius: medium
+              padding: small
+              background:
+                color: =$number(@ctx.inputs.current-step) = 2 ? 'primary'
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 2
+                options:
+                  icon: checkbox-checked
+                  size: regular
+                  color: positive 
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 2
+                options:
+                  icon: checkbox-unchecked
+                  size: regular
+                  color: positive  
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      grow: 1 
+                    justifyContent: center
+                  children:
+                    - type: component.text
+                      options:
+                        value: "Booking details"      
+                        emphasis: =$number(@ctx.inputs.current-step) >=2 ? "none":"medium"       
+                        size: tiny   
+                        align: center
+                         
+        # STEP 3
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) >= 3
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+              gap: small
+              alignItems: center
+              alignContent: center 
+              background:
+                color: =$number(@ctx.inputs.current-step) = 3 ? 'primary'
+              border:
+                style: solid
+                emphasis: extra-low
+              radius: medium
+              padding: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 3
+                options:
+                  icon: checkbox-checked
+                  size: regular
+                  color: positive    
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 3
+                options:
+                  icon: checkbox-unchecked
+                  size: regular
+                  color: positive   
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      grow: 1 
+                    justifyContent: center
+                  children:         
+                    - type: component.text
+                      options:
+                        value: "Extra"      
+                        emphasis: =$number(@ctx.inputs.current-step) >=3 ? "none":"medium"       
+                        size: tiny       
+                        align: center            
+             
+        # STEP 4
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) >= 4
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+              gap: small
+              alignItems: center
+              alignContent: center 
+              background:
+                color: =$number(@ctx.inputs.current-step) = 4 ? 'primary'
+              border:
+                style: solid
+                emphasis: extra-low
+              radius: medium
+              padding: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 4
+                options:
+                  icon: checkbox-checked
+                  size: regular
+                  color: positive  
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 4
+                options:
+                  icon: checkbox-unchecked
+                  size: regular
+                  color: positive  
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      grow: 1 
+                    justifyContent: center
+                  children:            
+                    - type: component.text
+                      options:
+                        value: "4 Step"      
+                        emphasis: =$number(@ctx.inputs.current-step) >=4 ? "none":"medium"       
+                        size: tiny 
+                        align: center
+        
+        # STEP 5
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) = 5
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+              gap: small
+              alignItems: center
+              alignContent: center 
+              background:
+                color: =$number(@ctx.inputs.current-step) = 5 ? 'primary'
+              border:
+                style: solid
+                emphasis: extra-low
+              radius: medium
+              padding: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 5
+                options:
+                  icon: checkbox-checked
+                  size: regular
+                  color: positive              
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 5
+                options:
+                  icon: checkbox-unchecked
+                  size: regular
+                  color: positive   
+              - type: component.view
+                options:
+                  style:
+                    flex: 
+                      grow: 1 
+                    justifyContent: center
+                  children:           
+                    - type: component.text
+                      options:
+                        value: "Invoice"      
+                        emphasis: =$number(@ctx.inputs.current-step) >=5 ? "none":"medium"       
+                        size: tiny   
+                        align: center

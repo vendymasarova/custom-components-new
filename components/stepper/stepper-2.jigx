@@ -1,0 +1,235 @@
+inputs:
+  current-step: 
+    defaultValue: 1
+    required: true
+    type: number
+  number-of-steps:
+    defaultValue: 1
+    required: true
+    type: number    
+# Max steps: 5
+type: component.default
+children:
+  - type: component.view
+    options:
+      style: 
+        flex: 
+          direction: row
+        
+        background:
+          color: "card"
+        radius: small
+        justifyContent: center
+        alignItems: center
+      children:
+        # STEP 1
+        - type: component.view
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                direction: row
+              gap: small
+              alignItems: center
+              justifyContent: center
+              height: 32
+              background:
+                color: =$number(@ctx.inputs.current-step) = 1 ? 'primary'
+              radius: small
+              
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 1
+                options:
+                  icon: checkbox-checked
+                  size: small
+                  color: positive
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) = 1
+                options:
+                  icon: checkbox-unchecked
+                  size: small
+                  color: positive 
+              - type: component.text
+                options:
+                  value: "Step 1"
+                  size: small
+
+
+        # DIVIDER
+        - type: component.view
+          when: =$number(@ctx.inputs.current-step) > 2
+          options:
+            style:
+              height: 18
+              width: 1
+              background:
+                color: element
+                emphasis: low
+            children: []     
+        
+        # STEP 2
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) >= 2
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                direction: row
+              gap: small
+              alignItems: center
+              justifyContent: center
+              height: 32
+              background:
+                color: =$number(@ctx.inputs.current-step) = 2 ? 'primary'
+              radius: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 2
+                options:
+                  icon: checkbox-checked
+                  size: small
+                  color: positive 
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 2
+                options:
+                  icon: checkbox-unchecked
+                  size: small
+                  color: positive              
+              - type: component.text
+                options:
+                  value: "Step 2"      
+                  emphasis: =$number(@ctx.inputs.current-step) >=2 ? "none":"medium"       
+                  size: small          
+
+        # DIVIDER
+        - type: component.view
+          when: =$number(@ctx.inputs.current-step) < 2 ? "true":$number(@ctx.inputs.current-step) > 3 ? 'true':''
+          options:
+            style:
+              height: 18
+              width: 1
+              background:
+                color: element
+                emphasis: low
+            children: []  
+
+        # STEP 3
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) >= 3
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                direction: row
+              gap: small
+              alignItems: center
+              justifyContent: center
+              height: 32
+              background:
+                color: =$number(@ctx.inputs.current-step) = 3 ? 'primary'
+              radius: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 3
+                options:
+                  icon: checkbox-checked
+                  size: small
+                  color: positive 
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 3
+                options:
+                  icon: checkbox-unchecked
+                  size: small
+                  color: positive              
+              - type: component.text
+                options:
+                  value: "Step 3"      
+                  emphasis: =$number(@ctx.inputs.current-step) >=3 ? "none":"medium"       
+                  size: small  
+                                  
+        # DIVIDER
+        - type: component.view
+          when: =$number(@ctx.inputs.current-step) < 3 ? "true":$number(@ctx.inputs.current-step) > 4 ? 'true':''
+          options:
+            style:
+              height: 18
+              width: 1
+              background:
+                color: element
+                emphasis: low
+            children: []  
+        
+        # STEP 4
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) >= 4
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                direction: row
+              gap: small
+              alignItems: center
+              justifyContent: center
+              height: 32
+              background:
+                color: =$number(@ctx.inputs.current-step) = 4 ? 'primary'
+              radius: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 4
+                options:
+                  icon: checkbox-checked
+                  size: small
+                  color: positive 
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 4
+                options:
+                  icon: checkbox-unchecked
+                  size: small
+                  color: positive              
+              - type: component.text
+                options:
+                  value: "4 Step"      
+                  emphasis: =$number(@ctx.inputs.current-step) >=4 ? "none":"medium"       
+                  size: small   
+        
+            
+        # STEP 5
+        - type: component.view
+          when: =$number(@ctx.inputs.number-of-steps) = 5
+          options:
+            style:
+              flex: 
+                grow: 1
+                basis: 1
+                direction: row
+              gap: small
+              alignItems: center
+              justifyContent: center
+              height: 32
+              background:
+                color: =$number(@ctx.inputs.current-step) = 5 ? 'primary'
+              radius: small
+            children:
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) > 5
+                options:
+                  icon: checkbox-checked
+                  size: small
+                  color: positive
+              - type: component.icon
+                when: =$number(@ctx.inputs.current-step) <= 5
+                options:
+                  icon: checkbox-unchecked
+                  size: small
+                  color: positive               
+              - type: component.text
+                options:
+                  value: "5 Step"      
+                  emphasis: =$number(@ctx.inputs.current-step) >=5 ? "none":"medium"       
+                  size: small   

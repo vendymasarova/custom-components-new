@@ -1,0 +1,17 @@
+name: custom-components-new
+title: custom-components-new
+category: management
+
+# home:
+#   - instanceId: home
+#     jigId: home
+widgets:
+  - size: 1x1 # choose size of the widget on the home hub
+    jigId: stepper
+    
+
+assets:
+  icons:
+    - checkbox-checked # auto-generated
+    - checkbox-unchecked # auto-generated
+    - navigation-menu # auto-generated

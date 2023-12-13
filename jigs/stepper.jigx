@@ -1,0 +1,33 @@
+title: Breadcrumbs / Stepper 
+type: jig.default
+icon: navigation-menu
+
+
+children:
+  - type: component.section
+    options:
+      title: Stepper with points
+      children:
+        - type: component.custom-component
+          componentId: stepper-1
+          inputs:
+            number-of-steps: 7
+            current-step: 2
+  - type: component.section
+    options:
+      title: Stepper with checkboxes - 1
+      children:
+        - type: component.custom-component
+          componentId: stepper-2
+          inputs:
+            number-of-steps: 4
+            current-step: 1
+  - type: component.section
+    options:
+      title: Stepper with checkboxes - 2
+      children:
+        - type: component.custom-component
+          componentId: stepper-3
+          inputs:
+            number-of-steps: 4
+            current-step: 3
