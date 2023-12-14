@@ -33,7 +33,7 @@ children:
             current-step: 3
   - type: component.section
     options:
-      title: Stepper with checkboxes - 2
+      title: Stepper with lines
       children:
         - type: component.custom-component
           componentId: stepper-4
