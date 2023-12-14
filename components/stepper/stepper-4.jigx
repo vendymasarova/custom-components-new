@@ -1,0 +1,195 @@
+type: component.default
+children:
+  # Max steps: 5
+  - type: component.view
+    options:
+      style:
+        flex: 
+          grow: 1
+          shrink: 1
+          basis: 1
+          direction: row
+        gap: small
+        alignItems: center
+        
+      children: 
+        # LINE 1
+        - type: component.view
+          options:
+            style:
+              gap: minimal
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+            children:
+              - type: component.view
+                when: =$number(@ctx.inputs.number-of-steps) >= 1
+                options:
+                  style:
+                    background: 
+                      color: =$number(@ctx.inputs.current-step) = 1 ? "primary":"element"
+                      emphasis: =$number(@ctx.inputs.current-step) = 1 ? "":"low"
+                    height: 3
+                    radius: tiny
+                    flex: 
+                      grow: 1
+                  children: []   
+              - type: component.text
+                options:
+                  value: "Step 1"      
+                  size: tiny  
+                  color: =$number(@ctx.inputs.current-step) = 1 ? 'primary'    
+                  weight: =$number(@ctx.inputs.current-step) = 1 ? 'semi-bold'     
+                  emphasis: =$number(@ctx.inputs.current-step) = 1 ? '':'low'    
+                   
+
+        # LINE 2
+        - type: component.view
+          options:
+            style:
+              gap: minimal
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+            children:
+              - type: component.view
+                when: =$number(@ctx.inputs.number-of-steps) >= 2
+                options:
+                  style:
+                    background: 
+                      color: =$number(@ctx.inputs.current-step) = 2 ? "primary":"element"
+                      emphasis: =$number(@ctx.inputs.current-step) = 2 ? "":"low"
+                    height: 3
+                    radius: tiny
+                    flex: 
+                      grow: 1
+                  children: [] 
+              - type: component.text
+                options:
+                  value: "Step 2"      
+                  size: tiny 
+                  color: =$number(@ctx.inputs.current-step) = 2 ? 'primary'    
+                  weight: =$number(@ctx.inputs.current-step) = 2 ? 'semi-bold'     
+                  emphasis: =$number(@ctx.inputs.current-step) = 2 ? '':'low'      
+                                                                  
+
+        # LINE 3
+        - type: component.view
+          options:
+            style:
+              gap: minimal
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+            children:
+              - type: component.view
+                when: =$number(@ctx.inputs.number-of-steps) >= 3
+                options:
+                  style:
+                    background: 
+                      color: =$number(@ctx.inputs.current-step) = 3 ? "primary":"element"
+                      emphasis: =$number(@ctx.inputs.current-step) = 3 ? "":"low"
+                    height: 3
+                    radius: tiny
+                    flex: 
+                      grow: 1
+                  children: []  
+              - type: component.text
+                options:
+                  value: "Step 3"      
+                  size: tiny 
+                  color: =$number(@ctx.inputs.current-step) = 3 ? 'primary'    
+                  weight: =$number(@ctx.inputs.current-step) = 3 ? 'semi-bold'     
+                  emphasis: =$number(@ctx.inputs.current-step) = 3 ? '':'low'      
+                                           
+
+        # LINE 4
+        - type: component.view
+          options:
+            style:
+              gap: minimal
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+            children:
+              - type: component.view
+                when: =$number(@ctx.inputs.number-of-steps) >= 4
+                options:
+                  style:
+                    background: 
+                      color: =$number(@ctx.inputs.current-step) = 4 ? "primary":"element"
+                      emphasis: =$number(@ctx.inputs.current-step) = 4 ? "":"low"
+                    height: 3
+                    radius: tiny
+                    flex: 
+                      grow: 1
+                  children: []         
+              - type: component.text
+                options:
+                  value: "Step 4"      
+                  size: tiny 
+                  color: =$number(@ctx.inputs.current-step) = 4 ? 'primary'    
+                  weight: =$number(@ctx.inputs.current-step) = 4 ? 'semi-bold'     
+                  emphasis: =$number(@ctx.inputs.current-step) = 4 ? '':'low'      
+                                    
+
+        # LINE 5
+        - type: component.view
+          options:
+            style:
+              gap: minimal
+              flex: 
+                grow: 1
+                basis: 1
+                shrink: 1
+            children:
+              - type: component.view
+                when: =$number(@ctx.inputs.number-of-steps) >= 5
+                options:
+                  style:
+                    background: 
+                      color: =$number(@ctx.inputs.current-step) >= 5 ? "primary":"element"
+                      emphasis: =$number(@ctx.inputs.current-step) >= 5 ? "":"low"
+                    height: 3
+                    radius: tiny
+                    flex: 
+                      grow: 1
+                  children: []      
+              - type: component.text
+                options:
+                  value: "Step 5"      
+                  size: tiny   
+                  color: =$number(@ctx.inputs.current-step) = 5 ? 'primary'    
+                  weight: =$number(@ctx.inputs.current-step) = 5 ? 'semi-bold'     
+                  emphasis: =$number(@ctx.inputs.current-step) = 5 ? '':'low'    
+                  
+        # # LINE 6
+        # - type: component.view
+        #   options:
+        #     style:
+        #         gap: minimal
+        #         flex: 
+        #         grow: 1
+        #         basis: 1
+        #         shrink: 1
+        #     children:
+        #       - type: component.view
+        #         when: =$number(@ctx.inputs.number-of-steps) >= 5
+        #         options:
+        #           style:
+        #             background: 
+        #               color: =$number(@ctx.inputs.current-step) >= 5 ? "primary":"element"
+        #               emphasis: =$number(@ctx.inputs.current-step) >= 5 ? "":"low"
+        #             height  : 3
+        #             flex: 
+        #               grow: 1
+        #           children: []      
+        #       - type: component.text
+        #         options:
+        #           value: "Extra"      
+        #           size: tiny       
+        #                                 

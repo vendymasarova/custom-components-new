@@ -31,3 +31,12 @@ children:
           inputs:
             number-of-steps: 4
             current-step: 3
+  - type: component.section
+    options:
+      title: Stepper with checkboxes - 2
+      children:
+        - type: component.custom-component
+          componentId: stepper-4
+          inputs:
+            number-of-steps: 5
+            current-step: 3
