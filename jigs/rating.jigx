@@ -1,0 +1,19 @@
+title: Ratings
+type: jig.default
+icon: star-half
+
+children:
+  - type: component.section
+    options:
+      title: stars
+      children:
+        - type: component.custom-component
+          componentId: rating-1
+  - type: component.section
+    options:
+      title: stars with statistics
+      children:
+        - type: component.custom-component
+          componentId: rating-2
+          inputs: 
+            rating: 4.5

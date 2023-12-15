@@ -1,0 +1,65 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        flex: 
+          direction: row
+        justifyContent: space-evenly
+      children:
+        - type: component.text
+          options:
+            align: center
+            onPress:
+              type: action.set-state
+              options:
+                state: =@ctx.solution.state.rating
+                value: 1
+            size: extra-large
+            color: =@ctx.solution.state.rating != null ? 'color3':'color14'
+            value: ★
+        - type: component.text
+          options:
+            align: center
+            onPress:
+              type: action.set-state
+              options:
+                state: =@ctx.solution.state.rating
+                value: 2
+            size: extra-large
+            color: =$number(@ctx.solution.state.rating) > 1 ? 'color3':'color14'
+            value: ★
+        - type: component.text
+          options:
+            align: center
+            onPress:
+              type: action.set-state
+              options:
+                state: =@ctx.solution.state.rating
+                value: 3
+            size: extra-large
+            color: =$number(@ctx.solution.state.rating) > 2 ? 'color3':'color14'
+            value: ★
+        - type: component.text
+          options:
+            align: center
+            onPress:
+              type: action.set-state
+              options:
+                state: =@ctx.solution.state.rating
+                value: 4
+            size: extra-large
+            color: =$number(@ctx.solution.state.rating) > 3 ? 'color3':'color14'
+            value: ★
+        - type: component.text
+          options:
+            align: center
+            onPress:
+              type: action.set-state
+              options:
+                state: =@ctx.solution.state.rating
+                value: 5
+            size: extra-large
+            color: =$number(@ctx.solution.state.rating) > 4 ? 'color3':'color14'
+            value: ★
+            
