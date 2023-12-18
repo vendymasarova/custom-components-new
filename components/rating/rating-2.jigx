@@ -8,7 +8,7 @@ children:
       children:
         - type: component.text
           options:
-            value: '6.4K RATINGS'
+            value: =@ctx.inputs.rating-number & 'K' & ' RATINGS'
             emphasis: high
             weight: semi-bold
         - type: component.view

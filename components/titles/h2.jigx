@@ -1,0 +1,8 @@
+type: component.default
+children:
+  - type: component.text
+    options:
+      value: =@ctx.inputs.title
+      size: medium
+      align: =@ctx.inputs.align = null ? 'left':@ctx.inputs.align
+      weight: extra-bold

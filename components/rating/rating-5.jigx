@@ -1,0 +1,35 @@
+type: component.default
+children:
+  - type: component.view
+    options:
+      style:
+        justifyContent: center
+        alignItems: center
+      children:
+        - type: component.text
+          options:
+            value: =@ctx.inputs.rating-number & 'K' & ' RATINGS'
+            emphasis: high
+            weight: semi-bold
+        - type: component.view
+          options:
+            style:
+              flex:
+                direction: row
+              gap: minimal
+              padding: 
+                top: small
+              alignItems: center
+            children:
+              - type: component.text
+                options:
+                  value: =@ctx.inputs.rating
+                  size: large
+                  weight: semi-bold
+                  emphasis: medium
+              - type: component.text
+                options:
+                  value: ★
+                  size: large
+                  weight: semi-bold
+                  emphasis: medium

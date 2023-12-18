@@ -7,6 +7,8 @@ widgets:
     jigId: stepper
   - size: 1x1
     jigId: rating
+  - size: 1x1
+    jigId: titles
     
 
 assets:
@@ -15,3 +17,4 @@ assets:
     - checkbox-unchecked # auto-generated
     - navigation-menu # auto-generated
     - star-half # auto-generated
+    - text-cursor-formatting

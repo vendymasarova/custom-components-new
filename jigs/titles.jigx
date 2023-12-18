@@ -1,0 +1,21 @@
+title: Titles
+type: jig.default
+icon: text-book
+
+children:
+  - type: component.custom-component
+    componentId: h1
+    inputs: 
+      title: Lorem ipsum dolor sit amet
+  - type: component.custom-component
+    componentId: h2
+    inputs: 
+      title: Lorem ipsum dolor sit amet
+  - type: component.custom-component
+    componentId: h3
+    inputs: 
+      title: Lorem ipsum dolor sit amet
+  - type: component.custom-component
+    componentId: h4
+    inputs: 
+      title: Lorem ipsum dolor sit amet
