@@ -42,7 +42,6 @@ children:
                         value: ★
                         size: medium
                         color: =@ctx.inputs.rating >= 2 ? 'color3':'color14'
-                        # emphasis: medium
                     - type: component.text
                       options:
                         value: ★
@@ -53,10 +52,8 @@ children:
                         value: ★
                         size: medium
                         color: =@ctx.inputs.rating >= 4 ? 'color3':'color14'
-                        # emphasis: medium
                     - type: component.text
                       options:
                         value: ★
                         size: medium
                         color: =@ctx.inputs.rating >= 4.5 ? 'color3':'color14'
-                        # emphasis: medium
