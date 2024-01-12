@@ -1,0 +1,74 @@
+title: Greetings
+type: jig.default
+
+children:
+  - type: component.section
+    options:
+      title: Greeting 1
+      children:
+        - type: component.custom-component
+          componentId: greeting-1
+          inputs: 
+            avatar: https://t14345253.p.clickup-attachments.com/t14345253/34139efb-6a96-468d-9604-cb1b9484e2ff/avarat10.png?view=open
+            welcome-message: Hello
+            name: John
+            avatar-size: regular
+            
+  - type: component.section
+    options:
+      title: Greeting with date
+      children:
+        - type: component.custom-component
+          componentId: greeting-1
+          inputs: 
+            avatar: https://t14345253.p.clickup-attachments.com/t14345253/34139efb-6a96-468d-9604-cb1b9484e2ff/avarat10.png?view=open
+            welcome-message: Hello
+            name: John
+            date: =$fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
+            avatar-size: regular
+            
+  - type: component.section
+    options:
+      title: Greeting with date and large avatar
+      children:
+        - type: component.custom-component
+          componentId: greeting-1
+          inputs: 
+            avatar: https://t14345253.p.clickup-attachments.com/t14345253/34139efb-6a96-468d-9604-cb1b9484e2ff/avarat10.png?view=open
+            welcome-message: Hello
+            name: John
+            date: =$fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
+            avatar-size: large
+            
+  - type: component.section
+    options:
+      title: Greeting with date and icon
+      children:
+        - type: component.custom-component
+          componentId: greeting-1
+          inputs: 
+            avatar: https://t14345253.p.clickup-attachments.com/t14345253/34139efb-6a96-468d-9604-cb1b9484e2ff/avarat10.png?view=open
+            welcome-message: Hello
+            name: John
+            date: =$fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
+            avatar-size: regular
+            right-icon: pencil
+            right-icon-color: color9
+            
+  - type: component.section
+    options:
+      title: Greeting with date and icon and large avatar
+      children:
+        - type: component.custom-component
+          componentId: greeting-1
+          inputs: 
+            avatar: https://t14345253.p.clickup-attachments.com/t14345253/34139efb-6a96-468d-9604-cb1b9484e2ff/avarat10.png?view=open
+            welcome-message: Hello
+            name: John
+            date: =$fromMillis($toMillis($now()), '[FNn], [D]. [M]. [Y]')
+            avatar-size: large
+            right-icon: pencil
+            right-icon-color: color9
+            
+        
+       

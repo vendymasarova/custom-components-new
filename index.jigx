@@ -9,12 +9,6 @@ widgets:
     jigId: rating
   - size: 1x1
     jigId: titles
+  - size: 1x1
+    jigId: greeting
     
-
-assets:
-  icons:
-    - checkbox-checked # auto-generated
-    - checkbox-unchecked # auto-generated
-    - navigation-menu # auto-generated
-    - star-half # auto-generated
-    - text-cursor-formatting
