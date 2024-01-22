@@ -1,0 +1,27 @@
+title: Name
+description: Description of your Jig
+type: jig.default
+icon: person
+
+
+
+# datasources:
+  # user:
+  #   type: datasource.static
+  #   options:
+  #     data:
+  #       - id: 1
+  #         name: John Doe
+  #         email: johndoe@gmail.com
+  #         avatar: https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      
+
+children:
+  - type: component.custom-component
+    componentId: user-profile-small
+    inputs: 
+      avatar: https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      name: John Doe
+      email: johndoe@gmail.com
+      address: New Town, Prague 2, Czechia
+      rating: 4.5

@@ -1,5 +1,6 @@
 title: Greetings
 type: jig.default
+icon: wave-hand
 
 children:
   - type: component.section

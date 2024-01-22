@@ -1,0 +1,95 @@
+title: User profile
+type: jig.default
+icon: person
+
+children:
+  - type: component.section
+    options:
+      title: User profile fullscreen
+      children:
+        - type: component.custom-component
+          componentId: user-profile
+        
+  - type: component.custom-component
+    componentId: h2
+    inputs: 
+      title: Address     
+  - type: component.entity
+    options:
+      isCompact: true
+      children:
+        - type: component.field-row
+          options:
+            children:
+              - type: component.entity-field
+                options:
+                  label: Street
+                  # value: =@ctx.inputs.street
+                  value: 458 Oak Ln
+              - type: component.entity-field
+                options:
+                  label: City
+                  # value: =@ctx.inputs.city
+                  value: Aspen
+        - type: component.field-row
+          options:
+            children:
+              - type: component.entity-field
+                options:
+                  label: Zip code
+                  # value: =@ctx.inputs.zip-code
+                  value: '81611'
+              
+              - type: component.entity-field
+                options:
+                  label: Country
+                  # value: =@ctx.inputs.country-code
+                  value: USA
+  - type: component.expander
+    options:
+      isInitiallyCollapsed: false                
+      header:
+        centerElement: 
+          type: component.titles
+          options:
+            title: Address
+            icon: location
+            iconColor: primary
+            align: left
+      children:
+        - type: component.location
+          options:
+            address: 458 Oak Ln, Aspen, CO 81611, USA
+            zoomLevel: 14
+        - type: component.entity
+          options:
+            children:
+              - type: component.field-row
+                options:
+                  children:
+                    - type: component.entity-field
+                      options:
+                        label: Street
+                        # value: =@ctx.inputs.street
+                        value: 458 Oak Ln
+                    - type: component.entity-field
+                      options:
+                        label: City
+                        # value: =@ctx.inputs.city
+                        value: Aspen
+              - type: component.field-row
+                options:
+                  children:
+                    - type: component.entity-field
+                      options:
+                        label: Zip code
+                        # value: =@ctx.inputs.zip-code
+                        value: '81611'
+                    
+                    - type: component.entity-field
+                      options:
+                        label: Country
+                        # value: =@ctx.inputs.country-code
+                        value: USA
+
+    

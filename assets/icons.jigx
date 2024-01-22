@@ -6,6 +6,11 @@
 icons:
   - checkbox-checked # auto-generated
   - checkbox-unchecked # auto-generated
+  - envelope # auto-generated
+  - location # auto-generated
   - navigation-menu # auto-generated
+  - person # auto-generated
+  - phone # auto-generated
   - star-half # auto-generated
   - text-book # auto-generated
+  - wave-hand # auto-generated

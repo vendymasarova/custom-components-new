@@ -11,4 +11,8 @@ widgets:
     jigId: titles
   - size: 1x1
     jigId: greeting
+  - size: 1x1
+    jigId: user-profile
+  - size: 1x1
+    jigId: user-profile-small
     
