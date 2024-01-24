@@ -1,0 +1,101 @@
+type: component.default
+children:
+  - type: component.card
+    options:
+      color: =@ctx.inputs.color ? @ctx.inputs.color:''
+      children:
+        - type: component.view
+          options:
+            style:
+              flex:
+                direction: row
+              gap: medium
+            children:
+              - type: component.view
+                options:
+                  style:
+                    flex:
+                      grow: 1
+                      basis: 1
+                  children:
+                    - type: component.image
+                      options:
+                        size: 
+                          height: 150
+                        source:
+                          # uri: =@ctx.inputs.avatar
+                          uri: =@ctx.inputs.avatar
+              - type: component.view
+                options:
+                  style: 
+                    flex: 
+                      grow: 2
+                      basis: 2
+                    justifyContent: center
+                  children:
+                    - type: component.view
+                      options:
+                        style: 
+                          padding: 
+                            bottom: large
+                        children:
+                          - type: component.text
+                            options:
+                              value: =@ctx.inputs.name
+                              size: medium
+                    - type: component.view
+                      options:
+                        style: {}
+                        children:
+                          - type: component.view
+                            options:
+                              style:
+                                flex:
+                                  direction: row
+                                padding: 
+                                  bottom: small
+                                gap: small
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: phone
+                                    size: small
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.phone
+                                    emphasis: high
+                          - type: component.view
+                            options:
+                              style:
+                                padding: 
+                                  bottom: small
+                                flex:
+                                  direction: row
+                                gap: small
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: envelope
+                                    size: small
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.email
+                                    emphasis: high
+                          - type: component.view
+                            options:
+                              style:
+                                padding: 
+                                  bottom: small
+                                flex:
+                                  direction: row
+                                gap: small
+                              children:
+                                - type: component.icon
+                                  options:
+                                    icon: pin
+                                    size: small
+                                - type: component.text
+                                  options:
+                                    value: =@ctx.inputs.address
+                                    emphasis: high
+              
